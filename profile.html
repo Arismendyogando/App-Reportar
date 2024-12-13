@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>User Profile</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+            <div class="controls">
+                <button id="sign-out">Sign Out</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="profile">
+            <div class="container">
+                <h2>Welcome, <span id="user-name"></span>!</h2>
+                <div id="contributor-profiles">
+                    <h3>Contributor Profiles</h3>
+                    <div id="contributor-list">
+                        
+                    </div>
+                    <button id="add-contributor-button">Add Contributor</button>
+                </div>
+            </div>
+        </section>
+        <div id="add-contributor-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Add Contributor</h2>
+                <form id="add-contributor-form">
+                    <div class="form-group">
+                        <label for="contributor-name">Name</label>
+                        <input type="text" id="contributor-name" name="contributor-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contributor-rcn">RCN</label>
+                        <input type="text" id="contributor-rcn" name="contributor-rcn" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contributor-activity">Economic Activity</label>
+                        <input type="text" id="contributor-activity" name="contributor-activity" required>
+                    </div>
+                    <button type="submit" class="button">Add Contributor</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 App Reportar Ai. All rights reserved.</p>
+        </div>
+    </footer>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

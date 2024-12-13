@@ -1,0 +1,425 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #0056b3;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0056b3;
+}
+
+main {
+    padding: 30px 0;
+}
+
+.hero {
+    background-color: #e9ecef;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.hero h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #0056b3;
+}
+
+.hero p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #0056b3;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #004085;
+}
+
+.services {
+    padding: 30px 0;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0056b3;
+    font-size: 1.7em;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.service {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.service h3 {
+    margin-bottom: 8px;
+    color: #0056b3;
+    font-size: 1.2em;
+}
+
+.target-audience {
+    background-color: #e9ecef;
+    padding: 30px 0;
+}
+
+.target-audience h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0056b3;
+    font-size: 1.7em;
+}
+
+.target-audience .market-universe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.target-audience .market-item {
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 1em;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.target-audience .market-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+.contact {
+    padding: 30px 0;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0056b3;
+    font-size: 1.7em;
+}
+
+.contact p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.contact .contact-reception {
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.contact .contact-secretary {
+    width: 200px;
+    margin-right: 20px;
+}
+
+.contact .contact-secretary img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.contact .contact-options {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.contact .contact-icons {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.contact .contact-icons a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.contact .contact-icons i {
+    margin-right: 5px;
+}
+
+.contact .agent-banners {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .agent-banner {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.contact .agent-banner img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.contact form {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 440px);
+    margin: 0;
+}
+
+.contact .form-group {
+    margin-bottom: 15px;
+    width: calc(50% - 10px);
+}
+
+.contact .form-group:last-child {
+    width: 100%;
+}
+
+.contact label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact textarea {
+    height: 150px;
+}
+
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero h2 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .contact .contact-reception {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact .contact-secretary {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+
+    .contact form {
+        width: 100%;
+    }
+
+    .contact .form-group {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3em;
+    }
+
+    .hero h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Dark theme styles */
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+body.dark-theme header {
+    background-color: #2a2a2a;
+    box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+}
+
+body.dark-theme header h1 {
+    color: #fff;
+}
+
+body.dark-theme nav ul li a {
+    color: #f0f0f0;
+}
+
+body.dark-theme nav ul li a:hover {
+    color: #fff;
+}
+
+body.dark-theme .hero {
+    background-color: #333;
+}
+
+body.dark-theme .hero h2 {
+    color: #fff;
+}
+
+body.dark-theme .services h2,
+body.dark-theme .target-audience h2,
+body.dark-theme .contact h2 {
+    color: #fff;
+}
+
+body.dark-theme .service {
+    background-color: #444;
+    box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+}
+
+body.dark-theme .service h3 {
+    color: #fff;
+}
+
+body.dark-theme .target-audience {
+    background-color: #333;
+}
+
+body.dark-theme .target-audience .market-item {
+    background-color: #444;
+    box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+    color: #f0f0f0;
+}
+
+body.dark-theme .contact .contact-reception {
+    background-color: #444;
+    box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+}
+
+body.dark-theme .contact .contact-icons a {
+    color: #f0f0f0;
+}
+
+body.dark-theme footer {
+    background-color: #1a1a1a;
+}
+
+body.dark-theme nav.sticky {
+    background-color: #2a2a2a;
+    box-shadow: 0 2px 4px rgba(255,255,255,0.2);
+}

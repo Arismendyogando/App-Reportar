@@ -2,6 +2,9 @@ name: Deploy to Hostinger
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
+  repository_dispatch:
+    types: [reportarai.com]    branches: [ main ]
 
 jobs:
   web-deploy:

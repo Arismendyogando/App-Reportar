@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Dashboard</h1>
+            <nav>
+                <ul>
+                     <li><a href="contributor-profile.html">Contributor Profile</a></li>
+                </ul>
+            </nav>
+            <div class="controls">
+                <button id="sign-out">Sign Out</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="dashboard" id="dashboard-section">
+            <div class="container">
+                <div id="dashboard-content" class="dashboard-content">
+                    <div id="dashboard-placeholder" class="dashboard-placeholder">
+                        <h2>Dashboard is locked</h2>
+                        <p>Please enter data in the "Data Entry" page to unlock the dashboard.</p>
+                    </div>
+                    <div id="dashboard-metrics" class="dashboard-metrics" style="display:none;">
+                        <h2>Financial Metrics</h2>
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <h3>Revenue</h3>
+                                <p id="revenue-metric">Loading...</p>
+                            </div>
+                            <div class="metric">
+                                <h3>Expenses</h3>
+                                <p id="expenses-metric">Loading...</p>
+                            </div>
+                            <div class="metric">
+                                <h3>Profit</h3>
+                                <p id="profit-metric">Loading...</p>
+                            </div>
+                        </div>
+                        <div class="charts">
+                            <div class="chart">
+                                <h3>Performance Chart</h3>
+                                <div id="performance-chart"></div>
+                            </div>
+                            <div class="chart">
+                                <h3>Analysis Chart</h3>
+                                <div id="analysis-chart"></div>
+                            </div>
+                        </div>
+                        <div class="subcategory-tracker">
+                            <h3>Subcategory Tracker</h3>
+                            <div id="subcategory-tracker-data"></div>
+                        </div>
+                        <div class="budget-tool">
+                            <h3>Budget Tool</h3>
+                            <div id="budget-tool-data"></div>
+                        </div>
+                        <div class="dashboard-filter">
+                            <h3>Filter</h3>
+                            <div class="filter-options">
+                                <label for="time-period">Time Period:</label>
+                                <select id="time-period">
+                                    <option value="monthly">Monthly</option>
+                                    <option value="quarterly">Quarterly</option>
+                                    <option value="yearly">Yearly</option>
+                                </select>
+                                <label for="category">Category:</label>
+                                <select id="category">
+                                    <option value="all">All</option>
+                                    <option value="purchases">Purchases</option>
+                                    <option value="sales">Sales</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="dashboard-subsections">
+                            <button id="dashboard-history-button" class="button">Dashboard History</button>
+                            <button id="dashboard-ia-button" class="button">Dashboard by IA</button>
+                        </div>
+                        <div id="dashboard-history" class="dashboard-subsection" style="display:none;">
+                            <h3>Dashboard History</h3>
+                            <p>Manual adjustments, periods, names, categories, tabs.</p>
+                        </div>
+                         <div id="dashboard-ia" class="dashboard-subsection" style="display:none;">
+                            <h3>Dashboard by IA</h3>
+                            <p>On-demand reports, queries, analysis, saved tabs.</p>
+                        </div>
+                        <button id="share-download-button" class="button">Share/Download Reports</button>
+                    </div>
+                </div>
+                <div class="chat-container">
+                    <h2>Chat</h2>
+                    <div id="chat-messages" class="chat-messages">
+                        
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="chat-input" placeholder="Type your message...">
+                        <button id="send-chat-button" class="button">Send</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 App Reportar Ai. All rights reserved.</p>
+        </div>
+    </footer>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
