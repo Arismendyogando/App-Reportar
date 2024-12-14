@@ -45,6 +45,7 @@ const dashboardHistory = document.getElementById('dashboard-history');
 const dashboardIa = document.getElementById('dashboard-ia');
 const shareDownloadButton = document.getElementById('share-download-button');
 const themeToggle = document.getElementById('theme-toggle');
+const languageSelector = document.getElementById('language-selector');
 
 let unsubscribe;
 let currentContributorId;
@@ -276,56 +277,67 @@ function handleShareDownloadClick() {
     console.log('Share/Download Reports');
 }
 
-if (googleSignInButton) {
-    googleSignInButton.addEventListener('click', signInWithGoogle);
+function updateContent(lang) {
+    if (lang === 'es') {
+        document.querySelector('header h1').textContent = 'App Reportar Ai';
+        document.querySelector('nav ul li:nth-child(1) a').textContent = 'Inicio';
+        document.querySelector('nav ul li:nth-child(2) a').textContent = 'Servicios';
+        document.querySelector('nav ul li:nth-child(3) a').textContent = 'Acerca de';
+        document.querySelector('nav ul li:nth-child(4) a').textContent = 'Contacto';
+        document.querySelector('.hero h2').textContent = 'Plataforma de Análisis de Datos con IA';
+        document.querySelector('.hero p').textContent = 'Empoderando a los profesionales con información inteligente.';
+        document.querySelector('.hero a').textContent = 'Comenzar';
+        document.querySelector('.services h2').textContent = 'Nuestros Servicios';
+        document.querySelector('.service:nth-child(1) h3').textContent = 'Análisis de Datos Contables';
+        document.querySelector('.service:nth-child(1) p').textContent = 'Analice sus datos contables con información impulsada por IA.';
+        document.querySelector('.service:nth-child(2) h3').textContent = 'Análisis de Datos de Ventas';
+        document.querySelector('.service:nth-child(2) p').textContent = 'Obtenga una visión clara de su rendimiento de ventas.';
+        document.querySelector('.service:nth-child(3) h3').textContent = 'Análisis de Datos de Marketing';
+        document.querySelector('.service:nth-child(3) p').textContent = 'Optimice sus campañas de marketing con decisiones basadas en datos.';
+         document.querySelector('.target-audience h2').textContent = 'Público Objetivo';
+        document.querySelector('.contact h2').textContent = 'Contáctenos';
+        document.querySelector('.contact-options a:nth-child(1)').innerHTML = '<i class="fas fa-comment-dots"></i> Chatea con nosotros';
+        document.querySelector('.contact-options a:nth-child(2)').innerHTML = '<i class="fas fa-phone"></i> Llámanos';
+        document.querySelector('#contact-form .form-group:nth-child(1) label').textContent = 'Nombre';
+        document.querySelector('#contact-form .form-group:nth-child(2) label').textContent = 'Correo Electrónico';
+        document.querySelector('#contact-form .form-group:nth-child(3) label').textContent = 'Teléfono';
+        document.querySelector('#contact-form .form-group:nth-child(4) label').textContent = 'Mensaje';
+        document.querySelector('#contact-form button').textContent = 'Enviar';
+        document.querySelector('footer p').textContent = '© 2024 App Reportar Ai. Todos los derechos reservados.';
+    } else {
+        document.querySelector('header h1').textContent = 'App Reportar Ai';
+        document.querySelector('nav ul li:nth-child(1) a').textContent = 'Home';
+        document.querySelector('nav ul li:nth-child(2) a').textContent = 'Services';
+        document.querySelector('nav ul li:nth-child(3) a').textContent = 'About';
+        document.querySelector('nav ul li:nth-child(4) a').textContent = 'Contact';
+        document.querySelector('.hero h2').textContent = 'Data Analysis Platform with AI';
+        document.querySelector('.hero p').textContent = 'Empowering professionals with intelligent insights.';
+        document.querySelector('.hero a').textContent = 'Get Started';
+         document.querySelector('.services h2').textContent = 'Our Services';
+        document.querySelector('.service:nth-child(1) h3').textContent = 'Accounting Data Analysis';
+        document.querySelector('.service:nth-child(1) p').textContent = 'Analyze your accounting data with AI-powered insights.';
+        document.querySelector('.service:nth-child(2) h3').textContent = 'Sales Data Analysis';
+        document.querySelector('.service:nth-child(2) p').textContent = 'Get a clear view of your sales performance.';
+        document.querySelector('.service:nth-child(3) h3').textContent = 'Marketing Data Analysis';
+        document.querySelector('.service:nth-child(3) p').textContent = 'Optimize your marketing campaigns with data-driven decisions.';
+        document.querySelector('.target-audience h2').textContent = 'Target Audience';
+        document.querySelector('.contact h2').textContent = 'Contact Us';
+        document.querySelector('.contact-options a:nth-child(1)').innerHTML = '<i class="fas fa-comment-dots"></i> Chat with us';
+        document.querySelector('.contact-options a:nth-child(2)').innerHTML = '<i class="fas fa-phone"></i> Call us';
+        document.querySelector('#contact-form .form-group:nth-child(1) label').textContent = 'Name';
+        document.querySelector('#contact-form .form-group:nth-child(2) label').textContent = 'Email';
+        document.querySelector('#contact-form .form-group:nth-child(3) label').textContent = 'Phone';
+        document.querySelector('#contact-form .form-group:nth-child(4) label').textContent = 'Message';
+        document.querySelector('#contact-form button').textContent = 'Send';
+        document.querySelector('footer p').textContent = '&copy; 2024 App Reportar Ai. All rights reserved.';
+    }
 }
 
-if (signOutButton) {
-    signOutButton.addEventListener('click', signOutUser);
-}
-
-if (addContributorButton) {
-    addContributorButton.addEventListener('click', openModal);
-}
-
-if (closeButton) {
-    closeButton.addEventListener('click', closeModal);
-}
-
-if (addContributorForm) {
-    addContributorForm.addEventListener('submit', addContributor);
-}
-
-tabButtons.forEach(button => {
-    button.addEventListener('click', handleTabClick);
-});
-
-if (openSettingsModalButton) {
-    openSettingsModalButton.addEventListener('click', openSettingsModal);
-}
-
-if (settingsCloseButton) {
-    settingsCloseButton.addEventListener('click', closeSettingsModal);
-}
-
-if (settingsForm) {
-    settingsForm.addEventListener('submit', handleSettingsSubmit);
-}
-
-if (sendChatButton) {
-    sendChatButton.addEventListener('click', handleChatSubmit);
-}
-
-if (dashboardHistoryButton) {
-    dashboardHistoryButton.addEventListener('click', handleDashboardSubsectionClick);
-}
-
-if (dashboardIaButton) {
-    dashboardIaButton.addEventListener('click', handleDashboardSubsectionClick);
-}
-
-if (shareDownloadButton) {
-    shareDownloadButton.addEventListener('click', handleShareDownloadClick);
+if (languageSelector) {
+    languageSelector.addEventListener('change', (e) => {
+        const selectedLanguage = e.target.value;
+        updateContent(selectedLanguage);
+    });
 }
 
 if (themeToggle) {

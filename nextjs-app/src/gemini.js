@@ -1,3 +1,20 @@
-const GEMINI_API_KEY = 'YAIzaSyDtHcwdZeN5_uY_7Rg9Ozww2s01zaDvCpIOUR_GEMINI_API_KEY';
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
-export default GEMINI_API_KEY;
+const GEMINI_API_KEY = process.env.GOOGLE_API_KEY;
+
+const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
+const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+
+async function generateText(prompt) {
+  try {
+    const result = await model.generateContent(prompt);
+    const response = await result.response;
+    const text = response.text();
+    return text;
+  } catch (error) {
+    console.error("Error generating text:", error);
+    return null;
+  }
+}
+
+export default generateText;

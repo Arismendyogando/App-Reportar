@@ -12,68 +12,17 @@
             <h1>Data Entry</h1>
             <nav>
                 <ul>
-                     <li><a href="contributor-profile.html">Contributor Profile</a></li>
+                    <li><a href="index.html">Home</a></li>
                 </ul>
             </nav>
-            <div class="controls">
-                <button id="sign-out">Sign Out</button>
-            </div>
         </div>
     </header>
     <main>
-        <section class="contributor-data">
+        <section class="data-entry">
             <div class="container">
-                <h2>Contributor Data</h2>
-                <div id="contributor-data-display">
-                    
-                </div>
+                <h2>Data Entry Page</h2>
             </div>
         </section>
-         <section class="settings-and-editing">
-            <div class="container">
-                <h2>Settings and Editing</h2>
-                <p>Configure column order, field names, etc.</p>
-                <button id="open-settings-modal" class="button">Open Settings</button>
-            </div>
-        </section>
-        <section class="operations-history">
-            <div class="container">
-                <h2>Operations History</h2>
-                <div class="file-upload-area">
-                    <input type="file" id="file-upload" multiple>
-                    <button id="upload-files-button" class="button">Upload Files</button>
-                </div>
-                <div class="history-table">
-                    <div class="tab-buttons">
-                        <button class="tab-button active" data-tab="purchases">Purchases</button>
-                        <button class="tab-button" data-tab="sales">Sales</button>
-                    </div>
-                    <div id="purchases-table" class="tab-content active">
-                        
-                    </div>
-                    <div id="sales-table" class="tab-content">
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div id="settings-modal" class="modal">
-            <div class="modal-content">
-                <span class="close-button">&times;</span>
-                <h2>Settings</h2>
-                <form id="settings-form">
-                    <div class="form-group">
-                        <label for="column-order">Column Order</label>
-                        <input type="text" id="column-order" name="column-order" placeholder="e.g., Date, Item, Amount">
-                    </div>
-                    <div class="form-group">
-                        <label for="field-names">Field Names</label>
-                        <input type="text" id="field-names" name="field-names" placeholder="e.g., Date, Item, Amount">
-                    </div>
-                    <button type="submit" class="button">Save Settings</button>
-                </form>
-            </div>
-        </div>
     </main>
     <footer>
         <div class="container">
