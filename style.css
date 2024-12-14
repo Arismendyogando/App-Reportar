@@ -347,6 +347,21 @@ nav.sticky {
     .contact .form-group {
         width: 100%;
     }
+    
+    .contact .contact-options {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .contact .agent-banners {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .contact .agent-banner {
+        margin: 0 8px 8px 0;
+    }
 }
 
 @media (max-width: 480px) {
